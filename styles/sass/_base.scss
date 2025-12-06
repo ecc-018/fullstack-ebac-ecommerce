@@ -1,0 +1,45 @@
+// Variables de paleta
+$black: #000000;
+$blue-900: #0b3d91;
+$blue-700: #1366d6;
+$blue-500: #1e90ff;
+$blue-300: #73b6ff;
+
+// Tipografías y configuración global
+$font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+$max-width: 1200px;
+
+// Mixins
+@mixin container($padding: 1rem){
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin clearfix(){
+  &::after{content: ""; display: table; clear: both;}
+}
+
+// Extends
+%visually-hidden{
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Reset básico
+*{box-sizing: border-box}
+html, body{height:100%}
+body{
+  margin:0;
+  font-family: $font-sans;
+  color: $black;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fc 100%);
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit; text-decoration:none}
+button{font-family: inherit}

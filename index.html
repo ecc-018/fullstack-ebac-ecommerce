@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tienda - Plantilla E-commerce</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        <header class="header" role="banner">
+            <div class="header__top">
+                <a class="header__brand" href="#">MiTienda</a>
+                <nav class="nav" role="navigation" aria-label="Navegación principal">
+                    <a href="#">Inicio</a>
+                    <a href="#productos">Productos</a>
+                    <a href="#ofertas">Ofertas</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <div class="search" role="search">
+                    <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+                    <button class="btn btn--ghost">Buscar</button>
+                    <button class="btn btn--primary">Carrito (0)</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="site-main" role="main">
+            <div class="breadcrumb" aria-hidden="true">Inicio / Productos</div>
+
+            <section class="container-grid" aria-label="Listado y filtros de productos">
+                <section class="product-list">
+                    <h1>Productos destacados</h1>
+                    <div class="product-grid" id="productos">
+                        <!-- product card x6 -->
+                        <article class="card" aria-labelledby="p1-title">
+                            <img src="sources/358592-800-800.webp" class="card__image" alt="Producto 1">
+                            <h2 id="p1-title" class="card__title">Producto 1</h2>
+                            <div class="card__price">$49.99</div>
+                            <p class="card__desc">Breve descripción del producto.</p>
+                            <div style="margin-top:0.75rem;"><button class="btn btn--primary">Agregar</button></div>
+                        </article>
+                        <article class="card" aria-labelledby="p2-title">
+                            <img src="sources/1714924119ImportedPhoto736615889027021jpeg.jpeg" class="card__image" alt="Producto 2">
+                            <h2 id="p2-title" class="card__title">Producto 2</h2>
+                            <div class="card__price">$79.00</div>
+                            <p class="card__desc">Breve descripción del producto.</p>
+                        </article>
+                        <article class="card" aria-labelledby="p3-title">
+                            <img src="sources/358592-800-800.webp" class="card__image" alt="Producto 3">
+                            <h2 id="p3-title" class="card__title">Producto 3</h2>
+                            <div class="card__price">$19.50</div>
+                        </article>
+                        <article class="card" aria-labelledby="p4-title">
+                            <img src="sources/Tenis_adidas_Grand_Court_Cloudfoam_Comfort_Blanco_GW9195_db01_standard.jpg.avif" class="card__image" alt="Producto 4">
+                            <h2 id="p4-title" class="card__title">Producto 4</h2>
+                            <div class="card__price">$120.00</div>
+                        </article>
+                        <article class="card" aria-labelledby="p5-title">
+                            <img src="sources/Tenis_adidas_VL_Court_3.0_Blanco_ID8797_HM1.jpg.avif" class="card__image" alt="Producto 5">
+                            <h2 id="p5-title" class="card__title">Producto 5</h2>
+                            <div class="card__price">$9.99</div>
+                        </article>
+                        <article class="card" aria-labelledby="p6-title">
+                            <img src="sources/Tenis_Advantage_adidas_Court_Blanco_GY6995_01_standard.jpg.avif" class="card__image" alt="Producto 6">
+                            <h2 id="p6-title" class="card__title">Producto 6</h2>
+                            <div class="card__price">$250.00</div>
+                        </article>
+                    </div>
+                </section>
+
+                <aside class="filters" aria-label="Filtros">
+                    <div class="filter-card">
+                        <h3>Filtrar por</h3>
+                        <label>
+                            <input type="checkbox"> En oferta
+                        </label>
+                        <hr>
+                        <h4>Precio</h4>
+                        <label><input type="radio" name="precio"> Menos de $50</label><br>
+                        <label><input type="radio" name="precio"> $50 - $150</label>
+                        <label><input type="radio" name="precio"> Más de $150</label>
+                    </div>
+                </aside>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer__inner">
+                <div>
+                    <strong>MiTienda</strong>
+                    <p>Dirección, contacto y redes</p>
+                </div>
+                <nav aria-label="Enlaces de pie de página">
+                    <a href="#">Privacidad</a> | <a href="#">Términos</a>
+                </nav>
+            </div>
+        </footer>
+    </body>
+</html>

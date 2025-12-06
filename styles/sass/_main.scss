@@ -1,0 +1,11 @@
+// Main Sass: importa parciales y compila a CSS
+@import 'base';
+@import 'layout';
+@import 'components';
+
+// Responsive
+@media (max-width: 800px){
+  .container-grid{ grid-template-columns: 1fr; }
+  .header__top{ flex-direction:column; gap:0.5rem; align-items:flex-start}
+  .product-grid .card__image{ height:140px }
+}
