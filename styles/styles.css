@@ -27,5 +27,16 @@ a:hover{color:#1366d6;text-decoration:underline}button{font-family: inherit}
 .search input{padding:0.5rem 0.75rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
 .breadcrumb{font-size:0.9rem;color:rgba(0,0,0,0.6)}
 .filter-card{background:white;padding:1rem;border-radius:8px}
+.cart-dropdown{position:relative}
+.cart-menu{position:absolute;top:100%;right:0;width:300px;background:white;border-radius:8px;box-shadow:0 12px 32px rgba(0,0,0,0.15);display:none;flex-direction:column;z-index:1000;margin-top:0.5rem;color:#000}
+.cart-dropdown:hover .cart-menu{display:flex}
+.cart-dropdown.active .cart-menu{display:flex}
+.cart-menu__header{display:flex;justify-content:space-between;align-items:center;padding:1rem;border-bottom:1px solid rgba(0,0,0,0.1)}
+.cart-menu__header h3{margin:0;font-size:1rem}
+.cart-menu__close{background:none;border:none;font-size:1.5rem;cursor:pointer;padding:0;color:rgba(0,0,0,0.5);transition:color 0.3s ease}
+.cart-menu__close:hover{color:#000}
+.cart-menu__items{padding:1rem;min-height:150px;max-height:300px;overflow-y:auto;flex:1}
+.cart-menu__empty{text-align:center;color:rgba(0,0,0,0.5);margin:0;padding:2rem 0}
+.cart-menu__footer{padding:1rem;border-top:1px solid rgba(0,0,0,0.1)}
 
 @media (max-width:800px){.container-grid{grid-template-columns:1fr}.header__top{flex-direction:column;gap:0.5rem;align-items:flex-start}.product-grid .card__image{height:140px}}
