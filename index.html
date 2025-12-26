@@ -20,7 +20,21 @@
                 <div class="search" role="search">
                     <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
                     <button class="btn btn--ghost">Buscar</button>
-                    <button class="btn btn--primary">Carrito (0)</button>
+                    <div class="cart-dropdown">
+                        <button class="btn btn--primary cart-toggle">Carrito (0)</button>
+                        <div class="cart-menu">
+                            <div class="cart-menu__header">
+                                <h3>Mi Carrito</h3>
+                                <button class="cart-menu__close" aria-label="Cerrar carrito">✕</button>
+                            </div>
+                            <div class="cart-menu__items">
+                                <p class="cart-menu__empty">Tu carrito está vacío</p>
+                            </div>
+                            <div class="cart-menu__footer">
+                                <button class="btn btn--primary" style="width: 100%;">Ver Carrito</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -117,5 +131,36 @@
                 </nav>
             </div>
         </footer>
+
+        <script>
+            // Carrito desplegable con hover y clic
+            const cartDropdown = document.querySelector('.cart-dropdown');
+            const cartToggle = document.querySelector('.cart-toggle');
+            const cartMenuClose = document.querySelector('.cart-menu__close');
+
+            // Mostrar/ocultar al hacer clic
+            cartToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                cartDropdown.classList.toggle('active');
+            });
+
+            // Cerrar al hacer clic en la X
+            cartMenuClose.addEventListener('click', (e) => {
+                e.stopPropagation();
+                cartDropdown.classList.remove('active');
+            });
+
+            // Cerrar al hacer clic fuera del menú
+            document.addEventListener('click', (e) => {
+                if (!cartDropdown.contains(e.target)) {
+                    cartDropdown.classList.remove('active');
+                }
+            });
+
+            // Evitar cerrar al hacer clic dentro del menú
+            document.querySelector('.cart-menu').addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        </script>
     </body>
 </html>
